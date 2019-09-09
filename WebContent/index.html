@@ -5,11 +5,35 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
+
+<style type="text/css">
+
+div.ex {
+
+background-color:white;
+	width: 700px;
+	height: 550px;
+	padding: 70px;
+	border-style:outset;
+ 	margin: 70px 0px; 
+	position: absolute;
+	left: 30%;
+	
+
+}
+
+.form-group .control-label:after {
+  content:"*";
+  color:red;
+}
+
+</style>
 <title>Insert title here</title>
 </head>
 <body>
 	<header> </header>
-	<nav class="navbar navbar-inverse" style="padding-right: 40px; padding-left: 40px;">
+	<nav class="navbar navbar-inverse"
+		style="padding-right: 40px; padding-left: 40px;">
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#" class="btn btn-sm"><span
 					class="glyphicon glyphicon-user" aria-hidden="true"></span><span>&nbsp;Sign
@@ -19,7 +43,8 @@
 		</ul>
 	</nav>
 
-	<nav class="navbar navbar-default" style="background-color: #FFFFFF; border: 0;">
+	<nav class="navbar navbar-default"
+		style="background-color: #FFFFFF; border: 0;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -30,11 +55,13 @@
 						class="icon-bar"></span>
 				</button>
 			</div>
-			
-			
-			
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<span class="nav navbar-nav navbar-left"><a href="#"><img src="img/header-logo.jpg"></a></span>
+
+
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<span class="nav navbar-nav navbar-left"><a href="#"><img
+						src="img/header-logo.jpg"></a></span>
 				<ul class="nav navbar-nav navbar-center">
 					<li><a href="#">공지 사항 <span class="sr-only">(current)</span></a></li>
 					<li><a href="#">상품 정보</a></li>
@@ -44,20 +71,119 @@
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="Search">
 					</div>
-					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
 				</form>
 			</div>
 		</div>
 	</nav>
 	<ol class="breadcrumb">
-		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span> Home</span></a></li>
+		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
+					Home</span></a></li>
 		<li class="active"><a href="#">회원가입</a></li>
 	</ol>
-	<div class="outer">
+	<div class="outer"></div>
+	
+	<div class="ex">
+
+	<form class="form-horizontal" role="form" method="post"
+		action="javascript:alert( 'success!' );">
+
+
+		<div class="form-group" id="divId">
+			<label for="inputId" class="col-lg-2 control-label">아이디</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control onlyAlphabetAndNumber"
+					id="id" data-rule-required="true" placeholder="" maxlength="30">
+			</div>
+		</div>
 		
+		<div class="form-group" id="divPassword">
+			<label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
+			<div class="col-lg-10">
+				<input type="password" class="form-control" id="password"
+					name="excludeHangul" data-rule-required="true"
+					placeholder="영문 숫자포함  6자리 이상" maxlength="30">
+			</div>
+		</div>
+
+		<div class="form-group" id="divName">
+			<label for="inputName" class="col-lg-2 control-label">이름</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control onlyHangul" id="name"
+					data-rule-required="true" placeholder="User Name" maxlength="15">
+			</div>
+		</div>
+
+		<div class="form-group" id="divAddress">
+			<label for="inputAddress" class="col-lg-2 control-label">주소</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control" id="nickname"
+					data-rule-required="true" placeholder="address" maxlength="50">
+			</div>
+		</div>
+
+
+		<div class="form-group" id="divPhoneNumber">
+			<label for="inputPhoneNumber" class="col-lg-2 control-label">전화번호</label>
+			<div class="col-lg-10">
+				<input type="tel" class="form-control onlyNumber" id="phoneNumber"
+					data-rule-required="true" placeholder="010-xxx-xxxx" maxlength="11">
+			</div>
+		</div>
+
+		<div class="form-group" id="divAllergy">
+			<label for="inputAllergy" class="col-lg-2 control-label">알레르기</label>
+			<div class="col-lg-10">
+
+				<label class="checkbox-inline"><input type="checkbox"
+					value="대두">대두</label> <label class="checkbox-inline"><input
+					type="checkbox" value="땅콩">땅콩</label> <label
+					class="checkbox-inline"><input type="checkbox" value="우유">우유</label>
+				<br> <label class="checkbox-inline"><input
+					type="checkbox" value="새우">새우</label> <label
+					class="checkbox-inline"><input type="checkbox" value="참치">참치</label>
+				<label class="checkbox-inline"><input type="checkbox"
+					value="년어">연어</label> <label class="checkbox-inline"><input
+					type="checkbox" value="쑥">쑥</label> <br> <label
+					class="checkbox-inline"><input type="checkbox" value="소고기">소고기</label>
+				<label class="checkbox-inline"><input type="checkbox"
+					value="닭고기">닭고기</label> <label class="checkbox-inline"><input
+					type="checkbox" value="돼지고기">돼지고기</label> <br> <label
+					class="checkbox-inline"><input type="checkbox" value="복숭아">복숭아</label>
+				<label class="checkbox-inline"><input type="checkbox"
+					value="민들레">민들레</label> <label class="checkbox-inline"><input
+					type="checkbox" value="계란흰자">계란흰자</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-primary">등록</button>
+			</div>
+		</div>
+		</div>
+	</form>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		
+		<script>
+		 $( "form" ).submit(function( event ) {
+             
+             var divId = $('#divId');
+             var divPassword = $('#divPassword');
+             var divName = $('#divName');
+             var divAddress = $('#divAddress');
+             var divPhoneNumber = $('#divPhoneNumber');
+             var divAllergy = $('#divAllergy');
+              
+          console.log(divId);                                  
+          
+         });</script>
+
 </body>
 </html>
