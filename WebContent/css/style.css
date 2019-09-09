@@ -91,7 +91,7 @@ body{
 .ex {
 	background-color:white;
 	width: 700px;
-	height: 1500px;
+	height: 100%;
 	padding: 40px;
 	border-style:outset;
  	margin: 40px 0px; 
