@@ -88,23 +88,20 @@ body{
 }
 
 /* register */
-div.ex {
-
-background-color:white;
+.ex {
+	background-color:white;
 	width: 700px;
-	height: 550px;
-	padding: 70px;
+	height: 1500px;
+	padding: 40px;
 	border-style:outset;
- 	margin: 70px 0px; 
+ 	margin: 40px 0px; 
 	position: absolute;
 	left: 30%;
-	
-
 }
 
 .form-group .control-label:after {
-  content:"*";
-  color:red;
+	 content:"*";
+	 color:red;
 }
 
 /* main */
