@@ -2,7 +2,7 @@
 
 /* body */
 body{
-	background-color: #CCCCCC;
+	background-color: #BBBBBB;
 }
 
 /* nav-top */
@@ -91,7 +91,7 @@ body{
 .ex {
 	background-color:white;
 	width: 700px;
-	height: 1500px;
+	height: 100%;
 	padding: 40px;
 	border-style:outset;
  	margin: 40px 0px; 
@@ -110,8 +110,19 @@ body{
 	text-align: center;
 }
 
-.container .box .content hr{
-	height: 10px;
-	background: #BBBBBB;
-	background-image: linear-gradient(left, #CCCCCC, right, #CCCCCC)
+.container .box hr{
+	height: 1px;
+	background: #AAAAAA;
+	background-image: linear-gradient(left, #CCCCCC, #AAAAAA, #CCCCCC);
 }
+
+.container .box .header{
+	color: #FDFDFD;
+	font-size: 1.7em;
+}
+
+.container .box .content{
+	color: #FDFDFD;
+	font-size: 1.3em;
+}
+
