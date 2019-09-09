@@ -8,15 +8,33 @@ body{
 /* nav-top */
 .navbar.navbar-inverse{
 	margin-bottom: 0px;
+	padding-right: 80px;
 }
 
 .navbar.navbar-inverse ul>li>a{
+	margin-top: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 20px;
 	background-color: #333333;
-	margin-left: 5px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-right: 5px;
 	color: #FFFFFF;
+}
+
+.navbar.navbar-inverse ul>li>a:hover{
+	background-color: #999999;
+}
+
+.nav.navbar-nav.pull-right .dropdown-menu{
+	background-color: #333333;
+}
+
+.nav.navbar-nav.pull-right .dropdown-menu label{
+	color: #FFFFFF;
+}
+
+.nav.navbar-nav.pull-right .dropdown-menu input{
+	background-color: #FFFEAA;
+	width: 200px;
 }
 
 /* nav-menu */
