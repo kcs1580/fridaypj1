@@ -86,3 +86,35 @@ body{
 	font-weight: bold;
 	text-decoration: none;
 }
+
+/* register */
+div.ex {
+
+background-color:white;
+	width: 700px;
+	height: 550px;
+	padding: 70px;
+	border-style:outset;
+ 	margin: 70px 0px; 
+	position: absolute;
+	left: 30%;
+	
+
+}
+
+.form-group .control-label:after {
+  content:"*";
+  color:red;
+}
+
+/* main */
+.container .box{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.container .box .content hr{
+	height: 10px;
+	background: #BBBBBB;
+	background-image: linear-gradient(left, #CCCCCC, right, #CCCCCC)
+}

@@ -1,285 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="EUC-KR">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-	crossorigin="anonymous">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-	crossorigin="anonymous"></script>
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
 
-<title>SafeFood | íšŒì› ê°€ì…</title>
-
-<meta charset="UTF-8">
 <style type="text/css">
-.login-box {
-	background-color: lime;
+
+div.ex {
+
+background-color:white;
+	width: 700px;
+	height: 550px;
+	padding: 70px;
+	border-style:outset;
+ 	margin: 70px 0px; 
+	position: absolute;
+	left: 30%;
+	
+
 }
+
+.form-group .control-label:after {
+  content:"*";
+  color:red;
+}
+
 </style>
+<title>SSAFY</title>
 </head>
 <body>
-	<div class="container">
-		<!-- ì¢Œìš°ì¸¡ì˜ ê³µê°„ í™•ë³´ -->
-		<!-- í—¤ë” ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
+	<header> </header>
+	<nav class="navbar navbar-inverse"
+		style="padding-right: 40px; padding-left: 40px;">
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a class="btn btn-sm" href="registermenu.html">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<span>&nbsp;Sign Up</span>
+				</a>
+			</li>
+			<li>
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown" id="menuLogin">
+						<a class="btn btn-sm dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+							<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+							<span>&nbsp;Login</span>
+						</a>
+						<div class="dropdown-menu" style="padding:17px;">
+							<form>
+								<div class="form-group">
+									<label for="id">¾ÆÀÌµğ</label>
+									<input type="email" class="form-control" id="id" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="pw">ÆĞ½º¿öµå</label>
+									<input type="password" class="form-control" id="pw" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-block btn-default">·Î±×ÀÎ</button>
+								</div>
+							</form>
+							<button type="submit" class="btn btn-block btn-default">ºñ¹Ğ¹øÈ£ Ã£±â</button>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
 
-
-		<!--// í—¤ë” ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
-		<!-- ëª¨ë‹¬ì°½ -->
-		<div class="modal fade" id="defaultModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">Ã—</button>
-						<h4 class="modal-title">ì•Œë¦¼</h4>
-					</div>
-					<div class="modal-body">
-						<p class="modal-contents"></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">ë‹«ê¸°</button>
-					</div>
-				</div>
-				<!-- /.modal-content -->
+	<nav class="navbar navbar-default"
+		style="background-color: #FFFFFF; border: 0;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
 			</div>
-			<!-- /.modal-dialog -->
+
+
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<span class="nav navbar-nav navbar-left"><a href="index.html"><img
+						src="img/header-logo.jpg"></a></span>
+				<ul class="nav navbar-nav navbar-center">
+					<li><a href="#">°øÁö »çÇ× <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">»óÇ° Á¤º¸</a></li>
+					<li><a href="#">º£½ºÆ® ¼·Ãë Á¤º¸</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
+			</div>
 		</div>
-		<!-- /.modal -->
-		<!--// ëª¨ë‹¬ì°½ -->
-		<hr />
-		<!-- ë³¸ë¬¸ ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
+	</nav>
+	<ol class="breadcrumb">
+		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
+					Home</span></a></li>
+		<li class="active"><a href="#">È¸¿ø°¡ÀÔ</a></li>
+	</ol>
+	<div class="outer"></div>
+	
+	<div class="ex">
+
+	<form class="form-horizontal" role="form" method="post"
+		action="javascript:alert( 'success!' );">
 
 
-
-		<form class="form-horizontal" role="form" method="post"
-			action="javascript:alert( 'success!' );">
-
-
-			<div class="form-group" id="divId">
-				<label for="inputId" class="col-lg-2 control-label">ì•„ì´ë””</label>
-				<div class="col-lg-10">
-					<input type="text" class="form-control onlyAlphabetAndNumber"
-						id="id" data-rule-required="true" placeholder="" maxlength="30">
-				</div>
+		<div class="form-group" id="divId">
+			<label for="inputId" class="col-lg-2 control-label">¾ÆÀÌµğ</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control onlyAlphabetAndNumber"
+					id="id" data-rule-required="true" placeholder="" maxlength="30">
 			</div>
-			<div class="form-group" id="divPassword">
-				<label for="inputPassword" class="col-lg-2 control-label">íŒ¨ìŠ¤ì›Œë“œ</label>
-				<div class="col-lg-10">
-					<input type="password" class="form-control" id="password"
-						name="excludeHangul" data-rule-required="true"
-						placeholder="ì˜ë¬¸ ìˆ«ìí¬í•¨  6ìë¦¬ ì´ìƒ" maxlength="30">
-				</div>
+		</div>
+		
+		<div class="form-group" id="divPassword">
+			<label for="inputPassword" class="col-lg-2 control-label">ÆĞ½º¿öµå</label>
+			<div class="col-lg-10">
+				<input type="password" class="form-control" id="password"
+					name="excludeHangul" data-rule-required="true"
+					placeholder="¿µ¹® ¼ıÀÚÆ÷ÇÔ  6ÀÚ¸® ÀÌ»ó" maxlength="30">
 			</div>
+		</div>
 
-			<div class="form-group" id="divName">
-				<label for="inputName" class="col-lg-2 control-label.">ì´ë¦„</label>
-				<div class="col-lg-10">
-					<input type="text" class="form-control onlyHangul" id="name"
-						data-rule-required="true" placeholder="User Name" maxlength="15">
-				</div>
+		<div class="form-group" id="divName">
+			<label for="inputName" class="col-lg-2 control-label">ÀÌ¸§</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control onlyHangul" id="name"
+					data-rule-required="true" placeholder="User Name" maxlength="15">
 			</div>
+		</div>
 
-			<div class="form-group" id="divAddress">
-				<label for="inputAddress" class="col-lg-2 control-label">ì£¼ì†Œ</label>
-				<div class="col-lg-10">
-					<input type="text" class="form-control" id="nickname"
-						data-rule-required="true" placeholder="address" maxlength="50">
-				</div>
+		<div class="form-group" id="divAddress">
+			<label for="inputAddress" class="col-lg-2 control-label">ÁÖ¼Ò</label>
+			<div class="col-lg-10">
+				<input type="text" class="form-control" id="nickname"
+					data-rule-required="true" placeholder="address" maxlength="50">
 			</div>
+		</div>
 
 
-			<div class="form-group" id="divPhoneNumber">
-				<label for="inputPhoneNumber" class="col-lg-2 control-label">ì „í™”ë²ˆí˜¸</label>
-				<div class="col-lg-10">
-					<input type="tel" class="form-control onlyNumber" id="phoneNumber"
-						data-rule-required="true" placeholder="010-xxx-xxxx"
-						maxlength="11">
-				</div>
+		<div class="form-group" id="divPhoneNumber">
+			<label for="inputPhoneNumber" class="col-lg-2 control-label">ÀüÈ­¹øÈ£</label>
+			<div class="col-lg-10">
+				<input type="tel" class="form-control onlyNumber" id="phoneNumber"
+					data-rule-required="true" placeholder="010-xxx-xxxx" maxlength="11">
 			</div>
+		</div>
 
-			<div class="form-group" id="divAllergy">
-				<label for="inputAllergy" class="col-lg-2 control-label">ì•Œë ˆë¥´ê¸°</label>
+		<div class="form-group" id="divAllergy">
+			<label for="inputAllergy" class="col-lg-2 control-label">¾Ë·¹¸£±â</label>
+			<div class="col-lg-10">
 
 				<label class="checkbox-inline"><input type="checkbox"
-					value="ëŒ€ë‘">ëŒ€ë‘</label> <label class="checkbox-inline"><input
-					type="checkbox" value="ë•…ì½©">ë•…ì½©</label> <label
-					class="checkbox-inline"><input type="checkbox" value="ìš°ìœ ">ìš°ìœ </label>
+					value="´ëµÎ">´ëµÎ</label> <label class="checkbox-inline"><input
+					type="checkbox" value="¶¥Äá">¶¥Äá</label> <label
+					class="checkbox-inline"><input type="checkbox" value="¿ìÀ¯">¿ìÀ¯</label>
 				<br> <label class="checkbox-inline"><input
-					type="checkbox" value="ìƒˆìš°">ìƒˆìš°</label> <label
-					class="checkbox-inline"><input type="checkbox" value="ì°¸ì¹˜">ì°¸ì¹˜</label>
+					type="checkbox" value="»õ¿ì">»õ¿ì</label> <label
+					class="checkbox-inline"><input type="checkbox" value="ÂüÄ¡">ÂüÄ¡</label>
 				<label class="checkbox-inline"><input type="checkbox"
-					value="ë…„ì–´">ì—°ì–´</label> <label class="checkbox-inline"><input
-					type="checkbox" value="ì‘¥">ì‘¥</label> <br> <label
-					class="checkbox-inline"><input type="checkbox" value="ì†Œê³ ê¸°">ì†Œê³ ê¸°</label>
+					value="³â¾î">¿¬¾î</label> <label class="checkbox-inline"><input
+					type="checkbox" value="¾¦">¾¦</label> <br> <label
+					class="checkbox-inline"><input type="checkbox" value="¼Ò°í±â">¼Ò°í±â</label>
 				<label class="checkbox-inline"><input type="checkbox"
-					value="ë‹­ê³ ê¸°">ë‹­ê³ ê¸°</label> <label class="checkbox-inline"><input
-					type="checkbox" value="ë¼ì§€ê³ ê¸°">ë¼ì§€ê³ ê¸°</label> <br> <label
-					class="checkbox-inline"><input type="checkbox" value="ë³µìˆ­ì•„">ë³µìˆ­ì•„</label>
+					value="´ß°í±â">´ß°í±â</label> <label class="checkbox-inline"><input
+					type="checkbox" value="µÅÁö°í±â">µÅÁö°í±â</label> <br> <label
+					class="checkbox-inline"><input type="checkbox" value="º¹¼ş¾Æ">º¹¼ş¾Æ</label>
 				<label class="checkbox-inline"><input type="checkbox"
-					value="ë¯¼ë“¤ë ˆ">ë¯¼ë“¤ë ˆ</label> <label class="checkbox-inline"><input
-					type="checkbox" value="ê³„ë€í°ì">ê³„ë€í°ì</label>
+					value="¹Îµé·¹">¹Îµé·¹</label> <label class="checkbox-inline"><input
+					type="checkbox" value="°è¶õÈòÀÚ">°è¶õÈòÀÚ</label>
 			</div>
-			
-			<div class="form-group">
-		<div class="col-lg-offset-2 col-lg-10">
-			<button type="submit" class="btn btn-default">ë“±ë¡</button>
 		</div>
-	</div>
-	</div>
+
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-primary">µî·Ï</button>
+			</div>
+		</div>
 	</form>
-
-
-	<script>
-         
-            $(function(){
-                //ëª¨ë‹¬ì„ ì „ì—­ë³€ìˆ˜ë¡œ ì„ ì–¸
-                var modalContents = $(".modal-contents");
-                var modal = $("#defaultModal");
-                 
-                $('.onlyAlphabetAndNumber').keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val($(this).val().replace(/[^_a-z0-9]/gi,'')); //_(underscore), ì˜ì–´, ìˆ«ìë§Œ ê°€ëŠ¥
-                    }
-                });
-                 
-                $(".onlyHangul").keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val(inputVal.replace(/[a-z0-9]/gi,''));
-                    }
-                });
-             
-                $(".onlyNumber").keyup(function(event){
-                    if (!(event.keyCode >=37 && event.keyCode<=40)) {
-                        var inputVal = $(this).val();
-                        $(this).val(inputVal.replace(/[^0-9]/gi,''));
-                    }
-                });
-                 
-                //------- ê²€ì‚¬í•˜ì—¬ ìƒíƒœë¥¼ classì— ì ìš©
-                $('#id').keyup(function(event){
-                     
-                    var divId = $('#divId');
-                     
-                    if($('#id').val()==""){
-                        divId.removeClass("has-success");
-                        divId.addClass("has-error");
-                    }else{
-                        divId.removeClass("has-error");
-                        divId.addClass("has-success");
-                    }
-                });
-                 
-                $('#password').keyup(function(event){
-                     
-                    var divPassword = $('#divPassword');
-                     
-                    if($('#password').val()==""){
-                        divPassword.removeClass("has-success");
-                        divPassword.addClass("has-error");
-                    }else{
-                        divPassword.removeClass("has-error");
-                        divPassword.addClass("has-success");
-                    }
-                });
-                 
-                $('#passwordCheck').keyup(function(event){
-                     
-                    var passwordCheck = $('#passwordCheck').val();
-                    var password = $('#password').val();
-                    var divPasswordCheck = $('#divPasswordCheck');
-                     
-                    if((passwordCheck=="") || (password!=passwordCheck)){
-                        divPasswordCheck.removeClass("has-success");
-                        divPasswordCheck.addClass("has-error");
-                    }else{
-                        divPasswordCheck.removeClass("has-error");
-                        divPasswordCheck.addClass("has-success");
-                    }
-                });
-                 
-                $('#name').keyup(function(event){
-                     
-                    var divName = $('#divName');
-                     
-                    if($.trim($('#name').val())==""){
-                        divName.removeClass("has-success");
-                        divName.addClass("has-error");
-                    }else{
-                        divName.removeClass("has-error");
-                        divName.addClass("has-success");
-                    }
-                });
-                 
-                $('#nickname').keyup(function(event){
-                     
-                    var divNickname = $('#divNickname');
-                     
-                    if($.trim($('#nickname').val())==""){
-                        divNickname.removeClass("has-success");
-                        divNickname.addClass("has-error");
-                    }else{
-                        divNickname.removeClass("has-error");
-                        divNickname.addClass("has-success");
-                    }
-                });
-                 
-                $('#email').keyup(function(event){
-                     
-                    var divEmail = $('#divEmail');
-                     
-                    if($.trim($('#email').val())==""){
-                        divEmail.removeClass("has-success");
-                        divEmail.addClass("has-error");
-                    }else{
-                        divEmail.removeClass("has-error");
-                        divEmail.addClass("has-success");
-                    }
-                });
-                 
-                $('#phoneNumber').keyup(function(event){
-                     
-                    var divPhoneNumber = $('#divPhoneNumber');
-                     
-                    if($.trim($('#phoneNumber').val())==""){
-                        divPhoneNumber.removeClass("has-success");
-                        divPhoneNumber.addClass("has-error");
-                    }else{
-                        divPhoneNumber.removeClass("has-error");
-                        divPhoneNumber.addClass("has-success");
-                    }
-                });
-                 
-                 
-                //------- validation ê²€ì‚¬
-                $( "form" ).submit(function( event ) {
-                     
-                    var divId = $('#divId');
-                    var divPassword = $('#divPassword');
-                    var divPasswordCheck = $('#divPasswordCheck');
-                    var divName = $('#divName');
-                    var divNickname = $('#divNickname');
-                    var divEmail = $('#divEmail');
-                    var divPhoneNumber = $('#divPhoneNumber');
-                    
-                     
-                                        
-                   
-                 
-                });
-                 
-            });
-             
-        </script>
-	<!--// ë³¸ë¬¸ ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
-	<hr />
-	<!-- í‘¸í„° ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
-
-
-	<!--// í‘¸í„° ë“¤ì–´ê°€ëŠ” ë¶€ë¶„ -->
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		
+		<script>
+		 $( "form" ).submit(function( event ) {
+             
+             var divId = $('#divId');
+             var divPassword = $('#divPassword');
+             var divName = $('#divName');
+             var divAddress = $('#divAddress');
+             var divPhoneNumber = $('#divPhoneNumber');
+             var divAllergy = $('#divAllergy');
+              
+          console.log(divId);                                  
+          
+         });</script>
+
 </body>
 </html>
