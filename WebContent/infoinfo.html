@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- Font Awesome CSS -->
+<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style type="text/css">
+.info-container {
+	
+}
+
+.item {
+	height: 500px;
+	background: lightgray;
+}
+
+.item img {
+	width: auto;
+	height: auto;
+	max-height: 250px;
+	max-width: 250px;
+	border: medium;
+}
+
+.item div {
+	height: 500px;
+	background: white;
+}
+.form-qty {
+height:50px;
+}
+#infobt {
+margirn:20px 20px;
+}
+
+</style>
+
+<title>SSAFY</title>
+</head>
+<body>
+	<header> </header>
+	<nav class="navbar navbar-inverse"
+		style="padding-right: 40px; padding-left: 40px;">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a class="btn btn-sm" href="registermenu.html"> <span
+					class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>&nbsp;Sign
+						Up</span>
+			</a></li>
+			<li>
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown" id="menuLogin"><a
+						class="btn btn-sm dropdown-toggle" href="#" data-toggle="dropdown"
+						id="navLogin"> <span class="glyphicon glyphicon-lock"
+							aria-hidden="true"></span> <span>&nbsp;Login</span>
+					</a>
+						<div class="dropdown-menu" style="padding: 17px;">
+							<form>
+								<div class="form-group">
+									<label for="id">아이디</label> <input type="email"
+										class="form-control" id="id" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="pw">패스워드</label> <input type="password"
+										class="form-control" id="pw" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-block btn-default">로그인</button>
+								</div>
+							</form>
+							<button type="submit" class="btn btn-block btn-default">비밀번호
+								찾기</button>
+						</div></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<nav class="navbar navbar-default"
+		style="background-color: #FFFFFF; border: 0;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<span class="nav navbar-nav navbar-left"><a href="index.html"><img
+						src="img/header-logo.jpg"></a></span>
+				<ul class="nav navbar-nav navbar-center">
+					<li><a href="#">공지 사항 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">상품 정보</a></li>
+					<li><a href="#">베스트 섭취 정보</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<!-- main-container start -->
+	<!-- ================ -->
+	<div class="main-container">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<h1 align="center">제품 정보</h1>
+					<h2 align="center">
+						<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+					</h2>
+
+
+
+
+					<!-- main start -->
+					<!-- ================ -->
+					<section class="info-container">
+
+						<div class="item">
+							<div class="col-xs-3">
+								<img src="img/아카페라아메리카노.jpg" alt="">
+
+							</div>
+
+
+							<div class="col-xs-5">
+
+								<table class="table">
+
+									<tr height="40px">
+										<th>제품명</th>
+										<td id="nameinfo"></td>
+									</tr>
+									<tr height="40px">
+										<th>제조사</th>
+										<td id="proinfo"></td>
+									</tr>
+									<tr height="100px">
+										<th>원재료</th>
+										<td id="inginfo"></td>
+									</tr>
+									<tr height="40px">
+										<th>알레르기 성분</th>
+										<td id="allinfo"></td>
+									</tr>
+								</table>
+								<div>
+								<form class="form-qty">
+									<div >
+										<label for="sel1">Quantity</label> <select
+											class="form-control" id="sel1">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+
+										</select>
+									</div>
+								</form>
+								<div id="infobt">
+								<button type="submit" class="btn btn-primary">
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>추가
+									</button>
+									<button type="submit" class="btn btn-primary">
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>찜
+									</button>
+								</div>
+
+								</div>
+								
+							</div>
+
+
+
+						</div>
+
+
+					</section>
+					<h3>영양정보</h3>
+					<div style="width:550px">
+					
+    <canvas id="myChart"></canvas>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- main end -->
+	​
+
+
+		
+	
+	<script src="plugins/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+	<script>
+	
+	// 우선 컨텍스트를 가져옵니다. 
+	var ctx = document.getElementById("myChart").getContext('2d');
+	/*
+	- Chart를 생성하면서, 
+	- ctx를 첫번째 argument로 넘겨주고, 
+	- 두번째 argument로 그림을 그릴때 필요한 요소들을 모두 넘겨줍니다. 
+	*/
+	var myChart = new Chart(ctx, {
+	    type: 'doughnut',
+	    data: {
+	        labels: ["칼로리", "탄수화물", "단백질", "지방", "당류", "나트륨","콜레스테롤","포화 지방산","트랜스지방"],
+	        datasets: [{
+	            label: '# of Votes',
+	            data: [12, 19, 3, 5, 2, 3,5,2,4,9],
+	            backgroundColor: [
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors(),
+	            	dynamicColors()
+	            	
+	            	
+	            ],
+	           
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	        maintainAspectRatio: true, // default value. false일 경우 포함된 div의 크기에 맞춰서 그려짐.
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero:true
+	                }
+	            }]
+	        }
+	    }
+	});
+	
+	 function dynamicColors() {
+	    var r = Math.floor(Math.random() * 255);
+	    var g = Math.floor(Math.random() * 255);
+	    var b = Math.floor(Math.random() * 255);
+	    return "rgba(" + r + "," + g + "," + b + ",0.8)";
+	}
+
+
+	
+	</script>
+
+</body>
+</html>
