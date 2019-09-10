@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>SSAFY</title>
+</head>
+<body>
+	<header> </header>
+	<nav class="navbar navbar-inverse"
+		style="padding-right: 40px; padding-left: 40px;">
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a class="btn btn-sm" href="registermenu.html">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<span>&nbsp;Sign Up</span>
+				</a>
+			</li>
+			<li>
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown" id="menuLogin">
+						<a class="btn btn-sm dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+							<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+							<span>&nbsp;Login</span>
+						</a>
+						<div class="dropdown-menu" style="padding:17px;">
+							<form>
+								<div class="form-group">
+									<label for="id">아이디</label>
+									<input type="email" class="form-control" id="id" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="pw">패스워드</label>
+									<input type="password" class="form-control" id="pw" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-block btn-default">로그인</button>
+								</div>
+							</form>
+							<button type="submit" class="btn btn-block btn-default">비밀번호 찾기</button>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<nav class="navbar navbar-default"
+		style="background-color: #FFFFFF; border: 0;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<span class="nav navbar-nav navbar-left"><a href="index.html"><img
+						src="img/header-logo.jpg"></a></span>
+				<ul class="nav navbar-nav navbar-center">
+					<li><a href="#">공지 사항 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">상품 정보</a></li>
+					<li><a href="#">베스트 섭취 정보</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	<ol class="breadcrumb">
+		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
+					Home</span></a></li>
+		<li class="active"><a href="#">회원가입</a></li>
+	</ol>
+	
+	<section>
+		<div class="container">
+			<div class="col-md-3"></div>
+			<div class="box col-md-6">
+				<div class="header">WHAT WE <span style="font-weight: 600;">PROVIDE</span></div>
+				<hr>
+				<div class="content">건강한 삶을 찾기 위한 먹거리 프로젝트</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</section>
+	
+	<div class="search-bar">
+		<div class="container">
+			<div class="col-md-3"></div>
+			<div class="col-md-6 dark-bg">
+				<form>
+					<div class="form-group">
+						<label>검색 조건</label>
+						<select name="condition" class="key-form form-control">
+							<option value="1">상품명</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>검색 단어</label>
+						<input type="text" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-md btn-primary" style="margin-top: 25px;">검색</button>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+	
+	<div class="items">
+		<div class="container">
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			send();
+		});
+		function send() {
+			$.ajax(
+				{
+					type : "get",
+					url : "res/foodInfo.xml",
+					dataType : "xml",
+					success : resXml,
+					error : eXml
+				}
+			);
+		}
+		function eXml(s) {
+			console.log(s);
+		}
+		function resXml(data) {
+			$("food",data).each(function(idx) {
+				var name = $("name", this).text();
+				var maker = $("maker", this).text();
+				var material = $("material", this).text();
+				var img = $("image", this).text();
+				$(".items .container").append('<div class="row" id="item-row' + idx + '">');
+				$("#item-row" + idx).append('<div class="col-md-3"></div>');
+				$("#item-row" + idx).append('<div class="item-img col-md-2">');
+				$("#item-row" + idx).append('<div class="col-md-1">');
+				$("#item-row" + idx).append('<div class="item-content col-md-6">');
+				$("#item-row" + idx + " .item-img").append("<img src=" + img + ">");
+				$("#item-row" + idx + " .item-img").append('<div class="box-content">');
+				$("#item-row" + idx + " .box-content").append('<ul class="icon">');
+				$("#item-row" + idx + " .box-content .icon").append('<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>');
+				$("#item-row" + idx + " .box-content .icon").append('<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span></a></li>');
+				$("#item-row" + idx + " .box-content").append('<h3 class="title">' + maker + '</h3>');
+				$("#item-row" + idx + " .item-content").append('<p class="item-title">' + name + '</p>');
+				$("#item-row" + idx + " .item-content").append('<hr>');
+				$("#item-row" + idx + " .item-content").append('<p class="item-material"> + ' + material + '</p>');
+				$("#item-row" + idx + " .item-content").append('<button type="button" class="btn btn-sm"><span class="glyphicon glyphicon-plus"></span> &nbsp;추가</button><button type="button" class="btn btn-sm"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;찜</button>');
+			});
+		}
+	</script>
+</body>
+</html>
