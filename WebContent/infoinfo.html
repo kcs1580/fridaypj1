@@ -13,6 +13,7 @@
 
 <style type="text/css">
 .info-container {
+height:400px;
 }
 
 section{
@@ -21,6 +22,7 @@ section{
 
 .item {
 	height: 400px;
+	padding:15px;
 }
 
 .item img {
@@ -210,11 +212,61 @@ height: 50px;
 
 
 					</section>
+					<div class="chart">
 					<h3>영양정보</h3>
-					<div style="width:550px">
+					<div style="width:650px"  class="col-xs-5">
 					
     <canvas id="myChart"></canvas>
 </div>
+<div class="col-xs-4">
+<table class="table">
+
+									<tr >
+										<th>일일제공량</th>
+										<td id="daily"></td>
+									</tr>
+									<tr >
+										<th>칼로리</th>
+										<td id="calo"></td>
+									</tr>
+									<tr >
+										<th>탄수화물</th>
+										<td id="carbo"></td>
+									</tr>
+									<tr >
+										<th>단백질</th>
+										<td id="prot"></td>
+									</tr>
+									<tr >
+										<th>지방</th>
+										<td id="fat"></td>
+									</tr>
+									<tr>
+										<th>당류</th>
+										<td id="sugar"></td>
+									</tr>
+									<tr>
+										<th>나트륨</th>
+										<td id="nat"></td>
+									</tr>
+									
+									<tr >
+										<th>콜레스테롤</th>
+										<td id="col"></td>
+									</tr>
+									<tr >
+										<th>포화지방산</th>
+										<td id="sfat"></td>
+									</tr>
+									<tr >
+										<th>트랜스지방</th>
+										<td id="tfat"></td>
+									</tr>
+								</table>
+</div>
+</div>
+
+
 				</div>
 			</div>
 		</div>
@@ -262,7 +314,7 @@ height: 50px;
 	            	
 	            ],
 	           
-	            borderWidth: 1
+	            borderWidth: 1;
 	        }]
 	    },
 	    options: {
@@ -283,7 +335,33 @@ height: 50px;
 	    var b = Math.floor(Math.random() * 255);
 	    return "rgba(" + r + "," + g + "," + b + ",0.8)";
 	}
-
+	 
+	 $(function() {
+			$("#call").click(send);
+		});
+		function send() {
+			$.ajax(
+				{
+					type : "get",
+					url : "res/foodInfo.xml"",
+					dataType : "xml",
+					success : resXml,
+					error : eXml
+				}
+			);
+		}
+		function eXml(s) {
+			console.log(s);
+		}
+		function resXml(data) {
+			//$(data).find('friend')
+			//$(data).eq(0).find("name");
+			$("friend",data).each(function() {
+				var n = $("name", this).text();
+				var a = $("addr", this).text();
+				$("#content").append(n + ":" + a + "<br/>");
+			});
+		}
 
 	
 	</script>
