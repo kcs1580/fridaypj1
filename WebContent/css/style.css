@@ -7,6 +7,7 @@ body{
 
 /* nav-top */
 .navbar.navbar-inverse{
+	border-radius: 0;
 	margin-bottom: 0px;
 	padding-right: 80px;
 }
@@ -148,7 +149,7 @@ section{
 	color: #999999;
 }
 
-.form-group{
+.search-bar .form-group{
 	float: left;
 	display: inline-block;
 }
@@ -174,3 +175,77 @@ section{
 	height: 100%;
 }
 
+/* items */
+.items .container{
+	margin-top: 20px;
+	float:left;
+	display: inline-block;
+	width: 100%;
+}
+
+.items > .container .row{
+	margin-top: 40px;
+}
+
+.items > .container .item-img{
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.items > .container .item-img img{
+	width: 180px;
+}
+
+.items > .container .item-content{
+	padding-left: 20px;
+}
+
+.items > .container .item-content .item-title{
+	font-size: 1.7em;
+}
+
+.items > .container .item-content .item-title a{
+	color: #000000;
+	transition: color 0.3s ease-out;
+}
+
+.items > .container .item-content .item-title a:hover{
+	color: #BEBEBE;
+}
+
+.items > .container .item-content .item-material{
+	font-size: 1em;
+	color: #AAAAAA;
+}
+
+.items > .container .item-content button{
+	background-color: #09AFDF;
+	color: #FFFFFF;
+	border-color: #0C9EC7;
+	margin-right: 1px;
+}
+
+
+
+
+/* img hover effect */
+
+.item-img{text-align:center;position:relative}
+.item-img .box-content{width:100%;height:100%;background:0 0;padding-top:25%;position:absolute;top:0;left:0;transition:all .3s ease 0s}
+.item-img .icon,.item-img .title{transition:all .2s ease 0s}
+.item-img:hover .box-content{background:rgba(0,0,0,.5)}
+.item-img .title{font-size:24px;color:#fff;transform:scale(0)}
+.item-img:hover .title{transform:scale(1)}
+.item-img .icon{list-style:none;padding:0;margin:0;opacity:0}
+.item-img:hover .icon{opacity:1}
+.item-img .icon li{display:inline-block}
+.item-img .icon li:first-child a,.item-img .icon li:last-child a{display:block;width:50px;height:50px;line-height:50px;font-size:24px;color:#fff;border:1px solid #fff;position:relative}
+.item-img .icon li a{top:-150px}
+.item-img:hover .icon li a{top:0}
+.item-img:hover .icon li a:hover{background:#a46789;border-color:#a46789}
+.item-img .icon li:first-child a{transition:all .6s cubic-bezier(.175,.885,.32,1.275) 0s}
+.item-img .icon li:last-child a{transition:all .6s cubic-bezier(.175,.885,.32,1.275) .1s}
+@media only screen and (max-width:990px){.item-img{margin-bottom:30px}
+}
+@media only screen and (max-width:360px){.item-img .box-content{padding-top:20%}
+}
