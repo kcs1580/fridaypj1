@@ -174,3 +174,12 @@ section{
 	height: 100%;
 }
 
+/* items */
+.items > .container{
+	float:left;
+	position: relative;
+}
+
+.items > .container .item-img img{
+	width: 30px;
+}
