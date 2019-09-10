@@ -84,7 +84,7 @@
 	<ol class="breadcrumb">
 		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
 					Home</span></a></li>
-		<li class="active"><a href="#">회원가입</a></li>
+		<li class="active"><a href="#">상품 정보</a></li>
 	</ol>
 	
 	<section>
@@ -112,9 +112,9 @@
 					</div>
 					<div class="form-group">
 						<label>검색 단어</label>
-						<input type="text" class="form-control">
+						<input type="text" name="content" class="form-control">
 					</div>
-					<button type="submit" class="btn btn-md btn-primary" style="margin-top: 25px;">검색</button>
+					<button type="submit" class="btn btn-md btn-primary" style="margin-top: 25px; margin-left: 2px;">검색</button>
 				</form>
 			</div>
 			<div class="col-md-3"></div>
@@ -148,24 +148,25 @@
 		}
 		function resXml(data) {
 			$("food",data).each(function(idx) {
+				var code = $("code", this).text();
 				var name = $("name", this).text();
 				var maker = $("maker", this).text();
 				var material = $("material", this).text();
 				var img = $("image", this).text();
 				$(".items .container").append('<div class="row" id="item-row' + idx + '">');
-				$("#item-row" + idx).append('<div class="col-md-3"></div>');
+				$("#item-row" + idx).append('<div class="col-md-2"></div>');
 				$("#item-row" + idx).append('<div class="item-img col-md-2">');
-				$("#item-row" + idx).append('<div class="col-md-1">');
 				$("#item-row" + idx).append('<div class="item-content col-md-6">');
+				$("#item-row" + idx).append('<div class="col-md-2">');
 				$("#item-row" + idx + " .item-img").append("<img src=" + img + ">");
 				$("#item-row" + idx + " .item-img").append('<div class="box-content">');
 				$("#item-row" + idx + " .box-content").append('<ul class="icon">');
 				$("#item-row" + idx + " .box-content .icon").append('<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>');
 				$("#item-row" + idx + " .box-content .icon").append('<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span></a></li>');
 				$("#item-row" + idx + " .box-content").append('<h3 class="title">' + maker + '</h3>');
-				$("#item-row" + idx + " .item-content").append('<p class="item-title">' + name + '</p>');
+				$("#item-row" + idx + " .item-content").append('<p class="item-title"><a href="infoinfo.html?code=' + code + '">' + name + '</a></p>');
 				$("#item-row" + idx + " .item-content").append('<hr>');
-				$("#item-row" + idx + " .item-content").append('<p class="item-material"> + ' + material + '</p>');
+				$("#item-row" + idx + " .item-content").append('<p class="item-material">' + material + '</p>');
 				$("#item-row" + idx + " .item-content").append('<button type="button" class="btn btn-sm"><span class="glyphicon glyphicon-plus"></span> &nbsp;추가</button><button type="button" class="btn btn-sm"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;찜</button>');
 			});
 		}

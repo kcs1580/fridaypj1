@@ -7,6 +7,7 @@ body{
 
 /* nav-top */
 .navbar.navbar-inverse{
+	border-radius: 0;
 	margin-bottom: 0px;
 	padding-right: 80px;
 }
@@ -148,7 +149,7 @@ section{
 	color: #999999;
 }
 
-.form-group{
+.search-bar .form-group{
 	float: left;
 	display: inline-block;
 }
@@ -179,6 +180,7 @@ section{
 	margin-top: 20px;
 	float:left;
 	display: inline-block;
+	width: 100%;
 }
 
 .items > .container .row{
@@ -200,6 +202,15 @@ section{
 
 .items > .container .item-content .item-title{
 	font-size: 1.7em;
+}
+
+.items > .container .item-content .item-title a{
+	color: #000000;
+	transition: color 0.3s ease-out;
+}
+
+.items > .container .item-content .item-title a:hover{
+	color: #BEBEBE;
 }
 
 .items > .container .item-content .item-material{
