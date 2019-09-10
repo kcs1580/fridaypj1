@@ -275,3 +275,14 @@ section{
 
 .bottom-items .container .box-content{
 }
+
+
+/* alert-message */
+.alert{
+	width: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    line-height: 120%;
+    text-align: center;
+}
