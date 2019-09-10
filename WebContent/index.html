@@ -98,7 +98,72 @@
 		</div>
 	</section>
 	
+	<div class="bottom-items">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="content col-md-6" id="content1"></div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="content col-md-6" id="content2"></div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			send();
+		});
+		function send() {
+			$.ajax(
+				{
+					type : "get",
+					url : "res/foodInfo.xml",
+					dataType : "xml",
+					success : resXml,
+					error : eXml
+				}
+			);
+		}
+		function eXml(s) {
+			console.log(s);
+		}
+		function resXml(data) {
+			var xmlData = $($("food",data).get().reverse());
+			
+			for(var idx=0; idx<3; idx++){
+				var d = xmlData[idx];
+				var code = $("code", xmlData[idx]).text();
+				var name = $("name", xmlData[idx]).text();
+				var maker = $("maker", xmlData[idx]).text();
+				var img = $("image", xmlData[idx]).text();
+				$("#content1").append('<div class="item-img" id="item-img' + idx + '">');
+				$("#item-img" + idx).append("<img src=" + img + ">");
+				$("#item-img" + idx).append('<div class="box-content">');
+				$("#item-img" + idx + " .box-content").append('<ul class="icon">');
+				$("#item-img" + idx + " .box-content .icon").append('<li><a href="infoinfo.html?code=' + code + '"><span class="glyphicon glyphicon-zoom-in"></span></a></li>');
+				$("#item-img" + idx + " .box-content").append('<h5 class="title">' + name + '</h5>');
+			}
+			
+			for(var idx=3; idx<6; idx++){
+				var d = xmlData[idx];
+				var code = $("code", xmlData[idx]).text();
+				var name = $("name", xmlData[idx]).text();
+				var maker = $("maker", xmlData[idx]).text();
+				var img = $("image", xmlData[idx]).text();
+				$("#content2").append('<div class="item-img" id="item-img' + idx + '">');
+				$("#item-img" + idx).append("<img src=" + img + ">");
+				$("#item-img" + idx).append('<div class="box-content">');
+				$("#item-img" + idx + " .box-content").append('<ul class="icon">');
+				$("#item-img" + idx + " .box-content .icon").append('<li><a href="infoinfo.html?code=' + code + '"><span class="glyphicon glyphicon-zoom-in"></span></a></li>');
+				$("#item-img" + idx + " .box-content").append('<h5 class="title">' + name + '</h5>');
+			}
+		}
+	</script>
 </body>
 </html>

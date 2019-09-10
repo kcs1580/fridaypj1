@@ -249,3 +249,29 @@ section{
 }
 @media only screen and (max-width:360px){.item-img .box-content{padding-top:20%}
 }
+
+
+
+
+/* main - bottom items */
+.bottom-items .container{
+	margin-top: 50px;
+	width: 100%;
+}
+
+.bottom-items .container .item-img{
+	width: 30%;
+	float: left;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #DDDDDD;
+}
+
+.bottom-items .container .item-img img{
+	width: 220px;
+}
+
+.bottom-items .container .box-content{
+}
