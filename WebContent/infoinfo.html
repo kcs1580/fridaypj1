@@ -380,7 +380,7 @@ div.changsu {
 		function resXml(data) {
 			//$(data).find('friend')
 			//$(data).eq(0).find("name");
-			$("food",data).find("code").eq(code).attr()).eq(function() {
+			$("[code="code"]",data).eq(1)(function() {
 				
 				var name = $("name", this).text();
 				var maker = $("maker", this).text();
