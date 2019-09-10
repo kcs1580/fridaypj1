@@ -82,7 +82,7 @@
 	</nav>
 	
 	<ol class="breadcrumb">
-		<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
+		<li><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;<span>
 					Home</span></a></li>
 		<li class="active"><a href="#">상품 정보</a></li>
 	</ol>
@@ -147,7 +147,7 @@
 			console.log(s);
 		}
 		function resXml(data) {
-			$("food",data).each(function(idx) {
+			$($("food",data).get().reverse()).each(function(idx) {
 				var code = $("code", this).text();
 				var name = $("name", this).text();
 				var maker = $("maker", this).text();
