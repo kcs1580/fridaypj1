@@ -13,16 +13,16 @@
 
 <style type="text/css">
 .info-container {
-height:400px;
+	height: 400px;
 }
 
-section{
+section {
 	background: #FFFFFF;
 }
 
 .item {
 	height: 400px;
-	padding:15px;
+	padding: 15px;
 }
 
 .item img {
@@ -39,18 +39,17 @@ section{
 }
 
 .form-qty {
-height:50px;
+	height: 50px;
 }
 
 #infobt {
-margin:20px 20px;
-height: 100px;
+	margin: 20px 20px;
+	height: 100px;
 }
 
-div.changsu{
-height: 50px;
+div.changsu {
+	height: 50px;
 }
-
 </style>
 
 <title>SSAFY</title>
@@ -165,34 +164,34 @@ height: 50px;
 									</tr>
 								</table>
 								<div class="changsu">
-								<form class="form-qty">
-									<div class="changsu">
-										<label for="sel1">Quantity</label> <select
-											class="form-control" id="sel1">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
+									<form class="form-qty">
+										<div class="changsu">
+											<label for="sel1">Quantity</label> <select
+												class="form-control" id="sel1">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+												<option>9</option>
 
-										</select>
+											</select>
+										</div>
+									</form>
+									<div id="infobt">
+										<button type="submit" class="btn btn-primary">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>추가
+										</button>
+										<button type="submit" class="btn btn-primary">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>찜
+										</button>
 									</div>
-								</form>
-								<div id="infobt">
-								<button type="submit" class="btn btn-primary">
-										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>추가
-									</button>
-									<button type="submit" class="btn btn-primary">
-										<span class="glyphicon glyphicon-user" aria-hidden="true"></span>찜
-									</button>
-								</div>
 
 								</div>
-								
+
 							</div>
 
 
@@ -202,58 +201,58 @@ height: 50px;
 
 					</section>
 					<div class="chart">
-					<h3>영양정보</h3>
-					<div style="width:650px"  class="col-xs-5">
-					
-    <canvas id="myChart"></canvas>
-</div>
-<div class="col-xs-4">
-<table class="table">
+						<h3>영양정보</h3>
+						<div style="width: 650px" class="col-xs-5">
 
-									<tr >
-										<th>일일제공량</th>
-										<td id="daily"></td>
-									</tr>
-									<tr >
-										<th>칼로리</th>
-										<td id="calo"></td>
-									</tr>
-									<tr >
-										<th>탄수화물</th>
-										<td id="carbo"></td>
-									</tr>
-									<tr >
-										<th>단백질</th>
-										<td id="prot"></td>
-									</tr>
-									<tr >
-										<th>지방</th>
-										<td id="fat"></td>
-									</tr>
-									<tr>
-										<th>당류</th>
-										<td id="sugar"></td>
-									</tr>
-									<tr>
-										<th>나트륨</th>
-										<td id="nat"></td>
-									</tr>
-									
-									<tr >
-										<th>콜레스테롤</th>
-										<td id="col"></td>
-									</tr>
-									<tr >
-										<th>포화지방산</th>
-										<td id="sfat"></td>
-									</tr>
-									<tr >
-										<th>트랜스지방</th>
-										<td id="tfat"></td>
-									</tr>
-								</table>
-</div>
-</div>
+							<canvas id="myChart"></canvas>
+						</div>
+						<div class="col-xs-4">
+							<table class="table">
+
+								<tr>
+									<th>일일제공량</th>
+									<td id="daily"></td>
+								</tr>
+								<tr>
+									<th>칼로리</th>
+									<td id="calo"></td>
+								</tr>
+								<tr>
+									<th>탄수화물</th>
+									<td id="carbo"></td>
+								</tr>
+								<tr>
+									<th>단백질</th>
+									<td id="prot"></td>
+								</tr>
+								<tr>
+									<th>지방</th>
+									<td id="fat"></td>
+								</tr>
+								<tr>
+									<th>당류</th>
+									<td id="sugar"></td>
+								</tr>
+								<tr>
+									<th>나트륨</th>
+									<td id="nat"></td>
+								</tr>
+
+								<tr>
+									<th>콜레스테롤</th>
+									<td id="col"></td>
+								</tr>
+								<tr>
+									<th>포화지방산</th>
+									<td id="sfat"></td>
+								</tr>
+								<tr>
+									<th>트랜스지방</th>
+									<td id="tfat"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
 
 
 				</div>
@@ -265,15 +264,22 @@ height: 50px;
 	​
 
 
-		
-	
+
+
 	<script src="plugins/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 
 	<script>
+	
+	
+		
+
 	
 	// 우선 컨텍스트를 가져옵니다. 
 	var ctx = document.getElementById("myChart").getContext('2d');
@@ -282,6 +288,8 @@ height: 50px;
 	- ctx를 첫번째 argument로 넘겨주고, 
 	- 두번째 argument로 그림을 그릴때 필요한 요소들을 모두 넘겨줍니다. 
 	*/
+	
+	
 	var myChart = new Chart(ctx, {
 	    type: 'doughnut',
 	    data: {
@@ -303,7 +311,7 @@ height: 50px;
 	            	
 	            ],
 	           
-	            borderWidth: 1;
+	           
 	        }]
 	    },
 	    options: {
@@ -325,14 +333,25 @@ height: 50px;
 	    return "rgba(" + r + "," + g + "," + b + ",0.8)";
 	}
 	 
+	 var code= null;
 	 $(function() {
-			$("#call").click(send);
+			send();
+			code= getParameterByName(code);
 		});
+	 
+		function getParameterByName(name) {
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		        results = regex.exec(location.search);
+		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+		
+	 
 		function send() {
 			$.ajax(
 				{
 					type : "get",
-					url : "res/foodInfo.xml"",
+					url : "res/foodInfo.xml",
 					dataType : "xml",
 					success : resXml,
 					error : eXml
@@ -345,10 +364,13 @@ height: 50px;
 		function resXml(data) {
 			//$(data).find('friend')
 			//$(data).eq(0).find("name");
-			$("friend",data).each(function() {
-				var n = $("name", this).text();
-				var a = $("addr", this).text();
-				$("#content").append(n + ":" + a + "<br/>");
+			$("[code="code"]",data).eq(1)(function() {
+				
+				var name = $("name", this).text();
+				var maker = $("maker", this).text();
+				var material = $("material", this).text();
+				
+				$("#nameinfo").append(name);
 			});
 		}
 
